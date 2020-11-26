@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    box-sizing: border-box;
+    display: block;
+    
+}
+section{
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid blue;
+    color: white;
+    font-family: 'Viga', sans-serif;
+    display: grid;
+    grid-template-rows: 80px 200px 290px 90px;
+    grid-template-columns: 1fr 1fr 1fr 250px;
+    font-size: 20px;
+    grid-gap:20px;
+    grid-template-areas: 
+    "header header header header "
+    "box1   box2    box3   sidebar "
+    "main   main   main   sidebar  "
+    "footer  footer  footer  footer  " ;
+}
+
+.div-1{
+  background-color: rgb(29, 29, 250);
+  grid-area: header;
+}
+.div-2{
+    background-color:rgb(2, 164, 228);
+    grid-area: box1;
+}
+.div-3{
+    background-color: rgb(253, 225, 62);
+    grid-area: box2;
+}
+.div-4{
+    background-color: rgb(130, 250, 10);
+    grid-area: box3;
+}
+.div-7{
+    background-color:rgb(0, 0, 0);
+     grid-area: sidebar; 
+}
+.div-8{
+    background-color: rgb(255, 70, 131);
+     grid-area: main; 
+
+}
+.div-9{
+    background-color: rgb(28, 219, 219);
+    grid-area: footer;
+}
+@media(max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 170px 200px 120px 120px 120px 80px ;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+        "box1"
+        "box2"
+        "box3"
+        "footer";
+    }
+}
